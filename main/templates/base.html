@@ -2,18 +2,22 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-    <title>Django Tailwind</title>
+    <title>{% block title %}{% endblock title %}</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="description" content="My calendar">
+		<meta name="keywords" content="">
 		{% tailwind_css %}
 	</head>
 
-	<body class="bg-gray-50 font-serif leading-normal tracking-normal">
-		<div class="container mx-auto">
-			<section class="flex items-center justify-center h-screen">
-				<h1 class="text-5xl">Django + Tailwind = ❤️</h1>
-			</section>
-		</div>
+	<body class="min-h-screen min-w-screen dark:bg-stone-950 bg-stone-50">
+		<nav class="dark:bg-stone-900 h-14 w-full border-b border-stone-700 flex items-center p-8">
+			<a href="" class="h-12 px-8 hover:bg-stone-800 flex items-center rounded text-stone-100">Home</a>
+		</nav>
+		<main>
+			{% block content %}
+			{% endblock content %}
+		</main>
 	</body>
 </html>

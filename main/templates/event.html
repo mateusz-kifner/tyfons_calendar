@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}
+  {{ event.title }}
+{% endblock title %}
+{% block content %}
+  <div class="p-4">
+    <div class="flex flex-col gap-4 p-4 rounded-lg bg-stone-800 border border-stone-700">
+      <h1 class="font-bold">{{ event.title }}</h1>
+      <h3>{{ event.description }}</h3>
+    </div>
+  </div>
+{% endblock content %}

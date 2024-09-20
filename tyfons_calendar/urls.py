@@ -21,5 +21,6 @@ from main import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+    path('event/<int:id>', views.event, name='event'),
     path("__reload__/", include("django_browser_reload.urls")),
 ]

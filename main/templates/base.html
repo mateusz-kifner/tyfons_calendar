@@ -1,23 +1,32 @@
 {% load static tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-    <title>{% block title %}{% endblock title %}</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<meta name="description" content="My calendar">
-		<meta name="keywords" content="">
-		{% tailwind_css %}
-	</head>
-
-	<body class="min-h-screen min-w-screen dark:bg-stone-950 bg-stone-50">
-		<nav class="dark:bg-stone-900 h-14 w-full border-b border-stone-700 flex items-center p-8">
-			<a href="" class="h-12 px-8 hover:bg-stone-800 flex items-center rounded text-stone-100">Home</a>
-		</nav>
-		<main>
-			{% block content %}
-			{% endblock content %}
-		</main>
-	</body>
+  <head>
+    <title>
+      {% block title %}
+      {% endblock title %}
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="My calendar">
+    <meta name="keywords" content="">
+    {% tailwind_css %}
+  </head>
+  <body class="min-h-screen min-w-screen dark:bg-stone-950 bg-stone-50 text-stone-950 dark:text-stone-200">
+    <nav class="dark:bg-stone-900 h-14 w-full border-b border-stone-700 flex items-center p-8 justify-between">
+      <div class="flex items-center gap-3">
+        <a href="{% url 'index' %}"
+           class="h-12 px-8 hover:bg-stone-800 flex items-center rounded text-stone-100">Home</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="{% url 'admin:index' %}"
+           class="h-12 px-8 hover:bg-stone-800 flex items-center rounded text-stone-100">Admin</a>
+      </div>
+    </nav>
+    <main>
+      {% block content %}
+      {% endblock content %}
+    </main>
+  </body>
 </html>

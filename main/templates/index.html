@@ -1,12 +1,17 @@
 {% extends "base.html" %}
-{% block title %}Title{% endblock title %}
+{% block title %}
+  Title
+{% endblock title %}
 {% block content %}
-<h1 class="bg-red-500">LIST</h1>
-{% for event in events %}
-<h2>
-<a href="">
-{{ event.title }}
-</a>
-</h2>
-{% endfor %}
+  <div class="p-4">
+    <div class="flex flex-col gap-4 p-4 rounded-lg bg-stone-800 border border-stone-700">
+      <h1 class="text-bold">LIST</h1>
+      <div class="border-b\ border-stone-700 w-full"></div>
+      {% for event in events %}
+        <h2>
+          <a href="">{{ event.title }}</a>
+        </h2>
+      </div>
+    </div>
+  {% endfor %}
 {% endblock content %}

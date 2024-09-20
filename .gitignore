@@ -96,3 +96,5 @@ venv.bak/
 .history
 
 __pycache__
+
+node_modules/

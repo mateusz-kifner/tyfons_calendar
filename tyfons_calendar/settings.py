@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'calendar_app',
+    'tailwind'
 ]
 
 MIDDLEWARE = [
